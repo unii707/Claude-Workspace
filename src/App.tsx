@@ -1,13 +1,10 @@
 import './App.css'
 
 const btnPrimary =
-  'px-5 py-2.5 bg-brand-primary text-white text-sm font-medium rounded-md border border-brand-primary transition-all hover:brightness-90 active:scale-[0.98]'
+  'px-5 py-2.5 bg-brand-primary text-white text-sm font-medium rounded-md border border-brand-primary cursor-pointer transition-all hover:brightness-85 active:scale-[0.98] disabled:bg-gray-100 disabled:text-gray-300 disabled:border-gray-200 disabled:cursor-not-allowed disabled:active:scale-100'
 
 const btnSecondary =
-  'px-5 py-2.5 bg-brand-primary/10 text-brand-primary text-sm font-medium rounded-md border border-brand-primary transition-all hover:brightness-90 active:scale-[0.98]'
-
-const Disabled =
-  'bg-gray-100 text-gray-300 border border-gray-200 cursor-not-allowed'
+  'px-5 py-2.5 bg-brand-primary/10 text-brand-primary text-sm font-medium rounded-md border border-brand-primary cursor-pointer transition-all hover:brightness-85 active:scale-[0.98] disabled:bg-gray-100 disabled:text-gray-300 disabled:border-gray-200 disabled:cursor-not-allowed disabled:active:scale-100'
 
 
 function SectionLabel({ children }: { children: string }) {
@@ -41,7 +38,7 @@ function App() {
             <button type="button" className={btnPrimary}>확인</button>
             <button type="button" className={btnPrimary}>저장하기</button>
             <button type="button" className={btnPrimary}>제출하기</button>
-            <button type="button" className={`${btnPrimary} ${Disabled}`} disabled>
+            <button type="button" className={btnPrimary} disabled>
               비활성화
             </button>
           </div>
@@ -57,7 +54,7 @@ function App() {
             <button type="button" className={btnSecondary}>취소</button>
             <button type="button" className={btnSecondary}>이전으로</button>
             <button type="button" className={btnSecondary}>수정하기</button>
-            <button type="button" className={`${btnSecondary} ${Disabled}`} disabled>
+            <button type="button" className={btnSecondary} disabled>
               비활성화
             </button>
           </div>
@@ -79,9 +76,8 @@ function App() {
         <div className="rounded-md border border-border-light px-4 py-3 bg-bg-surface">
           <p className="text-xs text-text-muted leading-relaxed">
             <span className="font-medium text-text-main">공통 규칙 —</span>{' '}
-            <code className="text-brand-primary">hover:brightness-90</code> ·{' '}
+            <code className="text-brand-primary">hover:brightness-85</code> ·{' '}
             <code className="text-brand-primary">active:scale-[0.98]</code> ·{' '}
-            <code className="text-brand-primary">disabled:opacity-50</code> ·{' '}
             <code className="text-brand-primary">rounded-md (6px)</code>
           </p>
         </div>
